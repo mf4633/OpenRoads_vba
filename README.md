@@ -4,6 +4,8 @@ Bentley OpenRoads Designer / MicroStation VBA macros. The original
 `nodeincell.mvba` ships compiled; everything else in this repo ships as
 **`.bas` source modules** so the code is reviewable and contributable.
 
+**Want it packaged?** [**OpenRoads Field Kit**](https://fingazpdx.gumroad.com/l/openroads-field-kit) — the same macros as a one-click zip with a quick-start guide, printable cheat sheet, and email support. The code in this repo is MIT and stays free; the kit is packaging and a reply when something breaks.
+
 The macros target plain MicroStation VBA so they run in any OpenRoads
 Designer release without depending on a specific CivilModel API version.
 A few (StationOffset, PointsIO) are written as conservative fallbacks for
@@ -92,8 +94,8 @@ the OpenRoads-native annotation tools.
 ## Notes
 
 - **Working units** are assumed to be survey **feet**. For metric DGNs,
-  change `SQFT_PER_ACRE` in `LabelAcres.bas` / `TotalArea.bas` to
-  `4046.856` (sq m / acre).
+  change `SQFT_PER_ACRE` in `LabelAcres.bas`, `TotalArea.bas`, and
+  `LotBearingDistance.bas` to `4046.856` (sq m / acre).
 - **`StationOffset`** is a fallback for environments where the OpenRoads
   CivilModel API isn't loaded. For real alignment objects with stationing
   equations and superelevation, prefer the native OpenRoads
